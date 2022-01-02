@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+//function is find the number
+//occuring odd number of times.
+//print the number.
+int OddOccurence(int arr[],int arr_size)
+{
+    int i,j;
+    for(int i=0; i<arr_size; i++)
+{
+    int count=0;
+    for(j=0; j<arr_size; j++)
+{
+    if(arr[i]==arr[j])
+    count++;
+}    
+
+    if(count%2!=0)
+    return arr[i];
+}    
+
+    return -1;
+}    
+  
+//Driver code
+   int main()
+   {
+       int arr[]={2,5,5,3,3,4,4,5,2,3};
+       int n=sizeof(arr)/sizeof(arr[0]);
+       
+       return 0;
+   }   
