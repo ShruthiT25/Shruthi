@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+//function is find pair of numbers
+//with given sum x.
+//Also print the pair.
+int i,j;
+int boolCharpair(int A[],int x,int size)
+{
+    for(i=0; i<(size-1);i++)
+{
+    for(j=i+1; j<size; j++)
+{
+    if(A[i]+A[j]==x)
+{
+    cout<<"pair with a given sum"<<x<<"is("<<A[i]<<","<<A[j]<<endl;
+     return 1;
+        }    
+       }    
+    return 0;
+    }
+}   
+int main() 
+{
+    int A[]={0,5,-2,3,2};
+    int x=5;
+    int size=sizeof(A)/sizeof(A[0]);
+    if(boolCharpair(A,x,size))
+{
+    cout<<"valid pair exists"<<endl;
+}
+  cout<<"not a valid pair exists for"<<x<<endl;
+  return 0;
+}

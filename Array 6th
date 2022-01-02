@@ -1,0 +1,45 @@
+
+
+#include<iostream>
+using namespace std;
+//function is to find the next smallest palindrome
+//check whether number is palindrome or not
+
+ //declaring variables;
+ int main() 
+{
+    int n,k,rev=0;
+    //strong num is n so that we can compare it later
+    //while num is not 0 we find its reverse store in
+    //rev
+   
+{
+   
+    rev=(rev%10)+k;
+}
+//check if number & reverse are same
+if(n==rev)
+{
+    return 1;
+}
+else
+{
+    return 0;
+   }
+ 
+{
+    
+    int main()
+    //Take any number of find its next palindrome number
+    //If number is not palindrome we go to next number
+    //using while loop
+ 
+ 
+    
+   
+
+//now we get the next palindrome
+//so lets print in
+}
+
+   
