@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+#include <unordered_set>
+using namespace std;
+ 
+// Function to find the smallest missing positive number from an unsorted array
+int findSmallestMissing(vector<int> const &nums)
+{
+    // use a range constructor to initialize the set from array elements
+    unordered_set<int> distinct(nums.begin(), nums.end());
+ 
+    // return first smallest missing positive number from the set
+    int index = 1;
+    while (true)
+    {
+        if (distinct.find(index) == distinct.end()) {
+            return index;
+        }
+        index++;
+    }
+}
+ 
+int main()
+{
+    vector<int> nums = { 1, 4, 2, -1, 6, 5 };
+ 
+    cout << "The smallest missing positive number from the array is "
+         << findSmallestMissing(nums);
+ 
+    return 0;
+}

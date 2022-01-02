@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        int arr[]={1,2,3,3,4,4,9,10,11,342,43};
+        int n=arr.length,t=98,cnt=0;
+        Arrays.sort(arr);
+        for(int k=2;k<n;k++)
+        {
+            TreeMap<Integer,Integer> ts1=new TreeMap<>();
+            for(int j=0;j<k;j++)
+            {
+                if(arr[j]==arr[k])
+                break;
+                int i=Math.min(t-arr[k]-arr[j],arr[j]); //try to get the number of elements less than arr[j] and target-arr[k]-arr[j]
+                cnt+=(ts1.lowerKey(i)==null?0:ts1.get(ts1.lowerKey(i)));
+                
+                if(ts1.containsKey(arr[j]))
+                ts1.put(arr[j],ts1.get(arr[j])+1);
+                else
+                {
+                    Integer val=ts1.lowerKey(arr[j]);
+                    ts1.put(arr[j],1+(val==null?0:ts1.get(val)));
+                }
+            }
+        }
+        System.out.println(cnt);
+    }
+}
