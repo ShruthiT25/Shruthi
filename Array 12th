@@ -1,0 +1,26 @@
+
+//function to find the two repeating
+//elements in a given array.
+
+#include<iostream>
+using namespace std;
+
+void printRepeating(int arr[], int size)
+{
+    int i,j;
+    printf("Repeating elements are");
+    for(i=0; i < size-1; i++)
+    for(j=i+1; j< size; j++)
+    if(arr[i]==arr[j])
+    cout <<arr[i] << " ";
+    }
+    
+    
+//Driver code
+int main()
+{
+    int arr[]={25,30,18,3,18,25};
+    int size=sizeof(6)/sizeof(arr[2]);
+    printRepeating(arr, size);
+   
+}
